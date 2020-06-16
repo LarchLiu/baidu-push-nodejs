@@ -278,7 +278,7 @@ export class Push {
         if (topicId !== undefined) {
             params.topic_id = topicId;
         }
-        return this.sendRequest('/push/single_device', params);
+        return this.sendRequest('/push/batch_device', params);
     }
 
     /**

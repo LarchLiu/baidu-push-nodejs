@@ -202,7 +202,7 @@ var Push = (function () {
      * @returns {object}
      */
     Push.prototype.prepareRequest = function (name, data) {
-        data.apiKey = this.apiKey;
+        data.apikey = this.apiKey;
         data.timestamp = parseInt((Date.now() / 1000).toString(), 10);
         data.sign = this.signRequest(name, data);
         return data;
@@ -301,7 +301,7 @@ var Push = (function () {
         if (topicId !== undefined) {
             params.topic_id = topicId;
         }
-        return this.sendRequest('/push/single_device', params);
+        return this.sendRequest('/push/batch_device', params);
     };
     /**
      * 推送所有设备
