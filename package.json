@@ -1,5 +1,5 @@
 {
-  "name": "baidu-push",
+  "name": "@cloudgeek/baidu-push",
   "version": "1.0.0",
   "description": "baidu push for nodejs",
   "main": "index.js",
