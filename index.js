@@ -264,6 +264,9 @@ var Push = (function () {
         if (msgType !== undefined) {
             params.msg_type = msgType;
         }
+        if (deployStatus !== undefined) {
+            params.deploy_status = deployStatus;
+        }
         if (expires !== undefined) {
             params.msg_expires = expires;
         }
@@ -288,6 +291,9 @@ var Push = (function () {
         };
         if (msgType !== undefined) {
             params.msg_type = msgType;
+        }
+        if (deployStatus !== undefined) {
+            params.deploy_status = deployStatus;
         }
         if (expires !== undefined) {
             params.msg_expires = expires;
