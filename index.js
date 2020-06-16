@@ -264,9 +264,6 @@ var Push = (function () {
         if (msgType !== undefined) {
             params.msg_type = msgType;
         }
-        if (deployStatus !== undefined) {
-            params.deploy_status = deployStatus;
-        }
         if (expires !== undefined) {
             params.msg_expires = expires;
         }
@@ -283,7 +280,7 @@ var Push = (function () {
      * @param topicId
      * @returns {Promise<Response>}
      */
-    Push.prototype.pushDevices = function (channelIds, msg, deviceType, msgType, deployStatus, expires, topicId) {
+    Push.prototype.pushBatchDevices = function (channelIds, msg, deviceType, msgType, deployStatus, expires, topicId) {
         var params = {
             channel_ids: JSON.stringify(channelIds),
             msg: JSON.stringify(msg),
@@ -291,9 +288,6 @@ var Push = (function () {
         };
         if (msgType !== undefined) {
             params.msg_type = msgType;
-        }
-        if (deployStatus !== undefined) {
-            params.deploy_status = deployStatus;
         }
         if (expires !== undefined) {
             params.msg_expires = expires;

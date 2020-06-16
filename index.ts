@@ -240,9 +240,6 @@ export class Push {
         if (msgType !== undefined) {
             params.msg_type = msgType;
         }
-        if (deployStatus !== undefined) {
-            params.deploy_status = deployStatus;
-        }
         if (expires !== undefined) {
             params.msg_expires = expires;
         }
@@ -260,7 +257,7 @@ export class Push {
      * @param topicId
      * @returns {Promise<Response>}
      */
-    public pushDevices(channelIds: string[], msg: message.iOS | message.Android, deviceType: DeviceType, msgType: MsgType, deployStatus: DeployStatus, expires?: number, topicId?: string) {
+    public pushBatchDevices(channelIds: string[], msg: message.iOS | message.Android, deviceType: DeviceType, msgType: MsgType, deployStatus: DeployStatus, expires?: number, topicId?: string) {
         const params: any = {
             channel_ids: JSON.stringify(channelIds),
             msg: JSON.stringify(msg),
@@ -268,9 +265,6 @@ export class Push {
         };
         if (msgType !== undefined) {
             params.msg_type = msgType;
-        }
-        if (deployStatus !== undefined) {
-            params.deploy_status = deployStatus;
         }
         if (expires !== undefined) {
             params.msg_expires = expires;

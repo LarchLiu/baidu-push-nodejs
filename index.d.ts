@@ -111,7 +111,7 @@ export declare class Push {
      * @param topicId
      * @returns {Promise<Response>}
      */
-    pushDevices(channelIds: string[], msg: message.iOS | message.Android, deviceType: DeviceType, msgType: MsgType, deployStatus: DeployStatus, expires?: number, topicId?: string): Promise<Response>;
+    pushBatchDevices(channelIds: string[], msg: message.iOS | message.Android, deviceType: DeviceType, msgType: MsgType, deployStatus: DeployStatus, expires?: number, topicId?: string): Promise<Response>;
     /**
      * 推送所有设备
      * @param msg
