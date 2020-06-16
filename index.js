@@ -285,7 +285,7 @@ var Push = (function () {
      */
     Push.prototype.pushDevices = function (channelIds, msg, deviceType, msgType, deployStatus, expires, topicId) {
         var params = {
-            channelIds: JSON.stringify(channelIds),
+            channel_ids: JSON.stringify(channelIds),
             msg: JSON.stringify(msg),
             device_type: deviceType,
         };

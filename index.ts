@@ -262,7 +262,7 @@ export class Push {
      */
     public pushDevices(channelIds: string[], msg: message.iOS | message.Android, deviceType: DeviceType, msgType: MsgType, deployStatus: DeployStatus, expires?: number, topicId?: string) {
         const params: any = {
-            channelIds: JSON.stringify(channelIds),
+            channel_ids: JSON.stringify(channelIds),
             msg: JSON.stringify(msg),
             device_type: deviceType,
         };
